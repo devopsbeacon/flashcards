@@ -1376,7 +1376,6 @@ function initFlashcards() {
       </div>
       <div class="db-controls">
         <select id="dbSubjectSelect" class="db-select">
-            <option value="all">🌐 All Subjects</option>
             <option value="ai-llm">🧠 1. AI & LLM Fundamentals</option>
             <option value="llm-mechanics">⚡ 2. LLM Mechanics & Tokens</option>
             <option value="mcp">🔌 3. Model Context Protocol</option>
