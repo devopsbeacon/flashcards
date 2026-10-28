@@ -1,11 +1,10 @@
 /**
- * DevOps Beacon Quiz Engine v2.0
+ * DevOps Beacon Quiz Engine v2.1 (with Passing Celebration)
  * GitHub: devopsbeacon/quiz
  * CDN: [suspicious link removed]
  */
 
 (function () {
-  // Master Dataset (Expandable for Jenkins, Kubernetes, Azure DevOps, etc.)
   const quizDataset = [
     {
       subject: "foundations",
@@ -135,7 +134,6 @@
     const root = document.getElementById("db-quiz-root");
     if (!root) return;
 
-    // Inject Scoped Styles
     const style = document.createElement("style");
     style.textContent = `
       #db-quiz-root {
@@ -193,10 +191,8 @@
     `;
     document.head.appendChild(style);
 
-    // Set Initial Theme
     root.setAttribute("data-theme", "light");
 
-    // Inject HTML Structure
     root.innerHTML = `
       <div class="db-card">
         <header class="db-header">
@@ -240,16 +236,15 @@
         </div>
 
         <div id="dbResultsScreen" class="db-results-screen">
-          <div style="font-size:2.5rem;margin-bottom:8px">🏆</div>
-          <h3>Assessment Completed!</h3>
+          <div id="dbTrophyIcon" style="font-size:3rem;margin-bottom:8px">🏆</div>
+          <h3 id="dbResultsHeading">Assessment Completed!</h3>
           <div class="db-results-score" id="dbFinalScore">0%</div>
-          <p id="dbSummaryText" style="color:var(--db-muted)"></p>
-          <button class="db-btn" id="dbRestartBtn" style="margin-top:14px">🔄 Retake Assessment</button>
+          <p id="dbSummaryText" style="color:var(--db-muted);font-size:1rem;margin-top:6px"></p>
+          <button class="db-btn" id="dbRestartBtn" style="margin-top:16px">🔄 Retake Assessment</button>
         </div>
       </div>
     `;
 
-    // Event Listeners
     document.getElementById("dbThemeBtn").onclick = () => {
       const current = root.getAttribute("data-theme");
       const next = current === "light" ? "dark" : "light";
@@ -338,16 +333,58 @@
     }
   }
 
+  // Celebration Fireworks Trigger (Triggers at >= 60%)
+  function triggerCelebration() {
+    if (typeof confetti === 'function') {
+      launchFireworks();
+    } else {
+      const script = document.createElement("script");
+      script.src = "[suspicious link removed]";
+      script.onload = launchFireworks;
+      document.head.appendChild(script);
+    }
+  }
+
+  function launchFireworks() {
+    const duration = 3 * 1000;
+    const animationEnd = Date.now() + duration;
+    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
+
+    function randomInRange(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    const interval = setInterval(function() {
+      const timeLeft = animationEnd - Date.now();
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+      const particleCount = 50 * (timeLeft / duration);
+      confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+      confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+    }, 250);
+  }
+
   function showResults() {
     document.getElementById("dbProgressBar").style.width = "100%";
     document.getElementById("dbQuizScreen").style.display = "none";
     document.getElementById("dbResultsScreen").style.display = "block";
+    
     const score = Math.round((trueCount / activeQuestions.length) * 100);
     document.getElementById("dbFinalScore").innerText = `${score}%`;
-    document.getElementById("dbSummaryText").innerText = `You scored ${trueCount} out of ${activeQuestions.length} (${falseCount} Incorrect).`;
+
+    if (score >= 60) {
+      document.getElementById("dbTrophyIcon").innerText = "🎉";
+      document.getElementById("dbResultsHeading").innerText = "Congratulations! You Passed!";
+      document.getElementById("dbSummaryText").innerText = `Outstanding job! You scored ${trueCount} out of ${activeQuestions.length} (${score}%). Keep up the great work!`;
+      triggerCelebration();
+    } else {
+      document.getElementById("dbTrophyIcon").innerText = "📚";
+      document.getElementById("dbResultsHeading").innerText = "Keep Practicing!";
+      document.getElementById("dbSummaryText").innerText = `You scored ${trueCount} out of ${activeQuestions.length} (${score}%). Review the modules and try again to achieve 60%+!`;
+    }
   }
 
-  // Self-mount on page load
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initQuizEngine);
   } else {
