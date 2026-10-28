@@ -120,7 +120,393 @@
         "Hardcoding credentials directly inside pom.xml"
       ],
       answer: 2
-    }
+    },
+    {
+    subject: "change_governance",
+    subjectLabel: "🧘 AI-Assisted Change Governance & AIOps",
+    question: "11. Why has traditional, approval-centric change governance become obsolete in modern cloud-native environments?",
+    options: [
+      "Because cloud environments deploy code infrequently, making review meetings unnecessary",
+      "Because modern software contains zero bugs and requires no security oversight",
+      "Because manual reviews struggle to process high-frequency changes, creating bottlenecks and review fatigue",
+      "Because Change Advisory Boards are required by law to be replaced by autonomous neural networks"
+    ],
+    answer: 2
+  },
+  {
+    subject: "change_governance",
+    question: "12. What fundamental shift defines the transition from traditional CABs to AI-assisted change governance?",
+    options: [
+      "Moving from manual form-checking to evidence-centric flow powered by automated Decision Packs",
+      "Shifting total operational liability from human engineers to third-party software vendors",
+      "Replacing all Git repositories with centralized paper-based sign-off binders",
+      "Eliminating pre-production testing in favor of live customer testing"
+    ],
+    answer: 0
+  },
+  {
+    subject: "change_governance",
+    question: "13. In Info-Gap Decision Theory (IGDT), what does the 'Robustness' metric quantify?",
+    options: [
+      "The total monetary cost of running a Kubernetes cluster for one year",
+      "How safely a proposed change tolerates operational uncertainty and unexpected failure modes",
+      "The exact number of lines of code added in a pull request",
+      "The speed at which an AI agent generates text responses"
+    ],
+    answer: 1
+  },
+  {
+    subject: "change_governance",
+    question: "14. How is 'Opportuneness' defined when evaluating a change request under Info-Gap Decision Theory?",
+    options: [
+      "The financial penalty incurred if a software license expires",
+      "The percentage of CPU memory consumed during a database migration",
+      "The total number of attendees present in a Change Advisory Board meeting",
+      "The upside value or risk reduction unlocked by acting swiftly without unnecessary delay"
+    ],
+    answer: 3
+  },
+  {
+    subject: "change_governance",
+    question: "15. How does Info-Gap Decision Theory differ from traditional 'Low/Medium/High' static risk buckets?",
+    options: [
+      "It eliminates human decision-making entirely from the release pipeline",
+      "It requires all releases to be classified as High Risk regardless of test coverage",
+      "It evaluates changes across dual dimensions of uncertainty tolerance and time-sensitive opportunity",
+      "It relies on subjective guesses made by external consultants"
+    ],
+    answer: 2
+  },
+  {
+    subject: "change_governance",
+    question: "16. What critical security feature ensures Gemini Enterprise agents respect user permission boundaries?",
+    options: [
+      "Workforce Identity Federation, ensuring agents only access data the human user is authorized to see",
+      "Hardcoding root administrative passwords directly inside AI prompt templates",
+      "Disabling all firewall rules during evidence collection",
+      "Storing all operational logs in public web repositories"
+    ],
+    answer: 0
+  },
+  {
+    subject: "change_governance",
+    question: "17. What role do enterprise connectors play in the Gemini Enterprise Enabled Architecture?",
+    options: [
+      "They automatically delete outdated source code repositories every weekend",
+      "They allow external hackers to inspect internal production databases",
+      "They securely pull context across Git repos, CI/CD logs, Jira tickets, and SLO dashboards into Decision Packs",
+      "They replace human developers by writing entire application codebases automatically"
+    ],
+    answer: 2
+  },
+  {
+    subject: "change_governance",
+    question: "18. What are the four core layers of the Human + AI Change Governance Model?",
+    options: [
+      "Planning, Coding, Testing, and Marketing",
+      "Alerting, Ignoring, Restarting, and Escalating",
+      "Drafting, Printing, Filing, and Archiving",
+      "AI Evidence Synthesis, Human Judgment, Deterministic Execution, and Closed-Loop Learning"
+    ],
+    answer: 3
+  },
+  {
+    subject: "change_governance",
+    question: "19. In the Human + AI Governance Model, what executes an approved change in production?",
+    options: [
+      "Generative AI agents writing directly to production servers",
+      "Deterministic automation tools such as CI/CD pipelines, GitOps sync, and policy-as-code gates",
+      "Manual terminal commands typed by junior helpdesk staff",
+      "Unverified third-party browser extensions"
+    ],
+    answer: 1
+  },
+  {
+    subject: "change_governance",
+    question: "20. What does the Zen metaphor of 'carrying water buckets vs. building aqueducts' represent for IT leaders?",
+    options: [
+      "Moving from manual, repetitive ticket reviews (buckets) to building automated evidence pipelines (aqueducts)",
+      "Switching from cloud computing back to physical on-premise data centers",
+      "Replacing software engineers with civil infrastructure workers",
+      "Ignoring operational efficiency to focus solely on hardware cooling systems"
+    ],
+    answer: 0
+  },
+  {
+    subject: "change_governance",
+    question: "21. How does the role of a 'Human-AI Orchestrator' differ from a traditional 'Change Approver'?",
+    options: [
+      "Orchestrators rubber-stamp all AI outputs without reading the attached evidence",
+      "Orchestrators spend 100% of their day writing raw YAML files by hand",
+      "Orchestrators design decision systems, set risk guardrails, and evaluate trade-offs rather than manually hunting logs",
+      "Orchestrators delegate legal accountability for outages to AI software vendors"
+    ],
+    answer: 2
+  },
+  {
+    subject: "change_governance",
+    question: "22. Which new skill is required for an AI-augmented change expert to query operational data effectively?",
+    options: [
+      "Manual assembly of paper audit binders",
+      "Strategic Prompt Design and context framing",
+      "High-speed alphanumeric data entry",
+      "Cobol programming language translation"
+    ],
+    answer: 1
+  },
+  {
+    subject: "change_governance",
+    question: "23. Why is 'Critical Data Evaluation' an essential skill when working with AI decision support systems?",
+    options: [
+      "To enable human reviewers to memorize all system log entries by heart",
+      "To convert numeric metrics into handwritten charts",
+      "To bypass all corporate security and compliance rules",
+      "To ensure human reviewers can spot missing telemetry, weak assumptions, or potential model hallucinations"
+    ],
+    answer: 3
+  },
+  {
+    subject: "change_governance",
+    question: "24. How does 'Counterfactual Reasoning' help a Change Advisory Board approve an urgent release safely?",
+    options: [
+      "It predicts what guardrails (e.g., canary rollouts or SLO gates) will elevate a change's safety score",
+      "It proves that software changes never cause production outages",
+      "It automatically generates legal disclaimers for end-user license agreements",
+      "It forces reviewers to reject all emergency patches by default"
+    ],
+    answer: 0
+  },
+  {
+    subject: "change_governance",
+    question: "25. What is contained within an AI-generated 'Decision Pack' prepared for a CAB review?",
+    options: [
+      "Raw, unformatted system logs spanning 500 pages without summaries",
+      "Impact mapping, historical failure signals, Info-Gap scores, XAI notes, and recommended guardrails",
+      "Marketing brochures and employee attendance records",
+      "Encrypted source code that cannot be inspected by human reviewers"
+    ],
+    answer: 1
+  },
+  {
+    subject: "change_governance",
+    question: "26. In the CAB case study, how should a low-urgency, non-critical monitoring agent upgrade be handled?",
+    options: [
+      "Treat it as an emergency patch and deploy it immediately at midnight",
+      "Subject it to a 4-hour executive review board meeting with all C-level officers",
+      "Bundle it into scheduled maintenance or classify it as a pre-approved standard change",
+      "Reject it permanently to prevent any modification to monitoring tools"
+    ],
+    answer: 2
+  },
+  {
+    subject: "change_governance",
+    question: "27. In the Change Approval Matrix, what action is recommended for Quadrant I (High Robustness + High Opportuneness)?",
+    options: [
+      "Defer approval until pre-production testing is repeated five times",
+      "Reject the change due to excess business value",
+      "Route the change to an offline external audit committee",
+      "Fast-Track approval through accelerated, controlled automation pipelines"
+    ],
+    answer: 3
+  },
+  {
+    subject: "change_governance",
+    question: "28. How should a change in Quadrant II (Low Robustness + High Opportuneness, e.g., an emergency patch) be governed?",
+    options: [
+      "Apply targeted guardrails (e.g., single-cluster canary + automated SLO gates) to elevate safety before approval",
+      "Reject the patch immediately and accept zero-day security exploitation",
+      "Bypass all reviews and deploy globally without telemetry monitoring",
+      "Archive the change ticket and re-evaluate in the next quarter"
+    ],
+    answer: 0
+  },
+  {
+    subject: "change_governance",
+    question: "29. What is the recommended strategy for Quadrant III changes (High Robustness + Low Opportuneness)?",
+    options: [
+      "Fast-track as an emergency release during peak business hours",
+      "Schedule during routine maintenance windows, bundle with other updates, or convert to a standard change",
+      "Escalate directly to the Board of Directors for risk approval",
+      "Delete the pull request to reduce backlog size"
+    ],
+    answer: 1
+  },
+  {
+    subject: "change_governance",
+    question: "30. What action does the Change Approval Matrix specify for Quadrant IV (Low Robustness + Low Opportuneness)?",
+    options: [
+      "Approve immediately without testing",
+      "Fast-track through canary pipelines",
+      "Defer approval, require pre-production validation, and gather missing telemetry evidence",
+      "Grant permanent administrative bypass privileges to the author"
+    ],
+    answer: 2
+  },
+  {
+    subject: "change_governance",
+    question: "31. What takes place during the 'Closed-Loop Learning' stage of the Gemini Enterprise architecture?",
+    options: [
+      "All operational logs are erased to save cloud storage space",
+      "Developers are forbidden from modifying deployed microservices",
+      "AI agents monitor post-deployment SLOs and convert successful release patterns into pre-approved standard rules",
+      "AI agents autonomously rewrite corporate governance policies without human oversight"
+    ],
+    answer: 2
+  },
+  {
+    subject: "change_governance",
+    question: "32. During an emergency CVE 9.8 vulnerability disclosure, why is 'Opportuneness' considered exceptionally high?",
+    options: [
+      "Because emergency patches are free of technical debt",
+      "Because zero-day vulnerabilities increase system processing speed",
+      "Because security fixes do not require testing or validation",
+      "Because delaying the patch leaves critical internet-facing assets exposed to active exploitation"
+    ],
+    answer: 3
+  },
+  {
+    subject: "change_governance",
+    question: "33. How does counterfactual guidance assist security leaders during an emergency patching event?",
+    options: [
+      "It proves that security patches are unnecessary",
+      "It identifies exact operational constraints (e.g., restricting rollout to Cluster A) that raise Robustness to acceptable levels",
+      "It automatically disables external network traffic across the entire enterprise",
+      "It generates random risk scores to satisfy compliance audits"
+    ],
+    answer: 1
+  },
+  {
+    subject: "change_governance",
+    question: "34. Why is human-in-the-loop (HITL) authorization legally and operationally non-negotiable in AI governance?",
+    options: [
+      "Because AI models cannot hold legal accountability, accept business risk, or understand enterprise context",
+      "Because software developers enjoy attending lengthy approval meetings",
+      "Because AI systems are incapable of reading digital log files",
+      "Because cloud providers prohibit the use of automation in production"
+    ],
+    answer: 0
+  },
+  {
+    subject: "change_governance",
+    question: "35. What is 'automation bias' in the context of Change Advisory Board reviews?",
+    options: [
+      "The refusal of software engineers to use automated deployment pipelines",
+      "A bug in CI/CD pipelines that causes build servers to crash",
+      "The tendency for human reviewers to uncritically rubber-stamp AI recommendations without validating evidence",
+      "The preference for manual paper forms over digital tickets"
+    ],
+    answer: 2
+  },
+  {
+    subject: "change_governance",
+    question: "36. How do SHAP/LIME feature attributions improve Explainable AI (XAI) transparency for reviewers?",
+    options: [
+      "They translate code comments into ancient languages",
+      "They break down exact risk drivers (e.g., -30% Untested Rollback, +20% Canary Coverage) behind a score",
+      "They hide risk scores behind encrypted security passwords",
+      "They automatically approve all pull requests submitted by senior developers"
+    ],
+    answer: 1
+  },
+  {
+    subject: "change_governance",
+    question: "37. What is the purpose of a 'Visible Assumption Log' in an AI-generated Decision Pack?",
+    options: [
+      "To expose unverified or weak data assumptions so human reviewers can challenge them during CAB reviews",
+      "To record developer attendance during sprint planning sessions",
+      "To store user passwords in plain text for easy auditing",
+      "To track hardware cooling temperatures in data centers"
+    ],
+    answer: 0
+  },
+  {
+    subject: "change_governance",
+    question: "38. Which international standard defines guidelines for an AI Management System (AIMS) in enterprise operations?",
+    options: [
+      "ISO 9001",
+      "IEEE 802.3",
+      "PCI-DSS 3.2",
+      "ISO/IEC 42001"
+    ],
+    answer: 3
+  },
+  {
+    subject: "change_governance",
+    question: "39. Under ISO/IEC 42001 guidelines, how are production-impacting decision-support agents classified?",
+    options: [
+      "As Unregulated Consumer Toys with zero compliance oversight",
+      "As High-Risk AI Systems requiring formal risk management, transparency, and human oversight",
+      "As Autonomous Systems with complete authority over production environments",
+      "As Deprecated Legacy Software scheduled for deletion"
+    ],
+    answer: 1
+  },
+  {
+    subject: "change_governance",
+    question: "40. How does Gemini Enterprise prevent 'governance bypass' by rogue or compromised agents?",
+    options: [
+      "By disabling all security logging across production clusters",
+      "By allowing agents to modify their own administrative permissions dynamically",
+      "By enforcing agent action registries that restrict AI agents to evidence collection while blocking autonomous execution",
+      "By requiring human engineers to share root passwords with AI models"
+    ],
+    answer: 2
+  },
+  {
+    subject: "change_governance",
+    question: "41. Why are vanity activity metrics (e.g., number of tickets processed) flawed indicators of governance success?",
+    options: [
+      "Because cloud platforms do not generate ticket data",
+      "Because measuring ticket throughput causes CI/CD pipelines to fail",
+      "Because vanity metrics are prohibited by international accounting laws",
+      "Because processing more tickets manually does not mean system stability or release safety has improved"
+    ],
+    answer: 3
+  },
+  {
+    subject: "change_governance",
+    question: "42. Which metric directly measures the security value delivered by fast-tracking emergency patches?",
+    options: [
+      "Security Exposure Days Avoided",
+      "Total lines of documentation written",
+      "Number of review board meetings held",
+      "Average age of data center server racks"
+    ],
+    answer: 0
+  },
+  {
+    subject: "change_governance",
+    question: "43. How is toil reduction measured in an AI-assisted change governance framework?",
+    options: [
+      "By counting the number of emails sent during a system outage",
+      "By calculating manual preparation and context-gathering hours saved for SREs and developers",
+      "By tracking the decrease in physical office attendance",
+      "By measuring keyboard typing speed across engineering teams"
+    ],
+    answer: 1
+  },
+  {
+    subject: "change_governance",
+    question: "44. What is Step 1 in the Executive Roadmap for implementing AI-assisted change governance?",
+    options: [
+      "Replace all Change Advisory Boards across the entire enterprise in a single weekend",
+      "Purchase ten different AI tools without setting governance policies",
+      "Start small with a focused pilot in a high-value domain (e.g., Kubernetes upgrades)",
+      "Ban all production deployments for six months to conduct audits"
+    ],
+    answer: 2
+  },
+  {
+    subject: "change_governance",
+    question: "45. What is the ultimate goal of Step 6 (Transformation) in the Sixfold Leadership Roadmap?",
+    options: [
+      "Replacing all human software developers with offshore contractors",
+      "Building a self-improving decision system that learns from post-change telemetry to streamline future releases",
+      "Eliminating all compliance and auditing requirements permanently",
+      "Migrating all enterprise applications back to mainframe computers"
+    ],
+    answer: 1
+  }
   ];
 
   let activeQuestions = [];
@@ -209,10 +595,11 @@
         <div class="db-subject-section">
           <label for="dbSubjectSelect">📚 Select Subject:</label>
           <select id="dbSubjectSelect" class="db-select">
-            <option value="all">⚡ All Docker Topics (10 Questions)</option>
+            <option value="all">⚡ All Topics (45 Questions)</option>
             <option value="foundations">🐳 Docker Foundations & Mindset (3 Qs)</option>
             <option value="multistage">🛠️ Multi-Stage Builds & Compose (4 Qs)</option>
             <option value="security">🔒 Advanced Security & Hardening (3 Qs)</option>
+            <option value="change_governance">🧘 AI-Assisted Change Governance (35 Qs)</option>
           </select>
         </div>
 
