@@ -1795,16 +1795,16 @@
         <div class="db-subject-section">
           <label for="dbSubjectSelect">📚 Select Subject:</label>
           <select id="dbSubjectSelect" class="db-select">
-            <option value="all">⚡ All Topics (45 Questions)</option>
+            <option value="all">⚡ All Topics (145 Questions)</option>
             <option value="foundations">🐳 Docker Foundations & Mindset (3 Qs)</option>
             <option value="multistage">🛠️ Multi-Stage Builds & Compose (4 Qs)</option>
             <option value="security">🔒 Advanced Security & Hardening (3 Qs)</option>
             <option value="change_governance">🧘 AI-Assisted Change Governance (35 Qs)</option>
-            <option value="jenkins">🎩 Jenkins CI/CD Fundamentals & Production-Grade Setup</option>
-            <option value="gitlab-ci">🦊 GitLab CI</option>
-            <option value="azure-devops">☁️ Microsoft Azure DevOps</option>
-            <option value="sast_sonarqube">🧘‍♂️ 🧘‍♂️ Mindful SAST & SonarQube</option>
-            <option value="springboot">🍃 SpringBoot</option>
+            <option value="jenkins">🎩 Jenkins CI/CD Fundamentals (20 Qs)</option>
+            <option value="gitlab-ci">🦊 GitLab CI (20 Qs)</option>
+            <option value="azure-devops">☁️ Microsoft Azure DevOps (20 Qs)</option>
+            <option value="sast_sonarqube">🧘‍♂️ Mindful SAST & SonarQube (20 Qs)</option>
+            <option value="springboot">🍃 SpringBoot (20 Qs)</option>
           </select>
         </div>
 
