@@ -506,6 +506,486 @@
       "Migrating all enterprise applications back to mainframe computers"
     ],
     answer: 1
+  },
+  {
+    "subject": "jenkins",
+    "subjectLabel": "🧘 Monk Mindset & Core Architecture",
+    "question": "46. How does the Indian Monk concept of 'Ekagrata' (single-pointed focus) guide the architectural role of the Jenkins Controller?",
+    "options": [
+      "The Controller runs builds inside internal JVM threads while bypassing worker nodes.",
+      "The Controller focuses strictly on orchestration and webhooks, offloading all heavy build workloads to isolated agents.",
+      "The Controller must execute all compilation and testing locally to maintain complete control.",
+      "The Controller stores all application source code directly in its local cache."
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "jenkins",
+    "subjectLabel": "🧘 Monk Mindset & Core Architecture",
+    "question": "47. In accordance with the KISS Principle, what constitutes the fundamental, uncluttered CI feedback loop?",
+    "options": [
+      "Scheduled Cron Trigger -> Local Shell Execution -> Permanent File Save -> Admin Email",
+      "Webhook Event -> Scripted Groovy Parse -> Local Artifact Store -> Slack Digest",
+      "Trigger Event (Commit/PR) -> Isolated Clean Execution -> Immediate Status Feedback",
+      "GUI Job Trigger -> Manual Approval Gate -> Multi-stage Deployment -> Notification Poll"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "jenkins",
+    "subjectLabel": "🧘 Monk Mindset & Core Architecture",
+    "question": "48. How does Nudge Theory improve developer code quality before code reaches the main branch?",
+    "options": [
+      "By sending daily automated warning emails to developers who have failing unit tests.",
+      "By blocking developers from opening Pull Requests until a manager manually approves their code.",
+      "By automatically rejecting any commit that contains more than 100 lines of code.",
+      "By embedding automated fast-linting and visual status indicators directly into Pull Requests, gently guiding developers to fix issues locally."
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "jenkins",
+    "subjectLabel": "🏗️ Multi-Environment Setup & Installation",
+    "question": "49. To enforce the principle of 'Sthirata' (firmness of foundation), how must `/var/jenkins_home` be managed on Linux deployments?",
+    "options": [
+      "It must be strictly decoupled onto a dedicated, high-IOPS persistent storage volume.",
+      "It should be stored inside the root operating system filesystem alongside system binaries.",
+      "It should be ephemeral and wiped on every operating system reboot.",
+      "It should be stored entirely in system RAM for maximum IOPS performance."
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "jenkins",
+    "subjectLabel": "🏗️ Multi-Environment Setup & Installation",
+    "question": "50. Why should a production Linux Jenkins installation always be fronted by a reverse proxy like Nginx?",
+    "options": [
+      "To allow Jenkins agents to communicate without needing network ports.",
+      "To enforce TLS 1.3 encryption, manage SSL certificates, and prevent raw, unencrypted exposure of port 8080.",
+      "To speed up Java Virtual Machine garbage collection cycles.",
+      "To replace the Jenkins web interface with a custom HTML dashboard."
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "jenkins",
+    "subjectLabel": "🏗️ Multi-Environment Setup & Installation",
+    "question": "51. In a cloud-native Kubernetes deployment using Helm, which component guarantees zero state loss when the Jenkins controller pod is rescheduled?",
+    "options": [
+      "ClusterIP service routing",
+      "ConfigMap environment variables",
+      "Ephemeral emptyDir volume mounts",
+      "Persistent Volume Claim (PVC) backed by high-speed block storage"
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "jenkins",
+    "subjectLabel": "🔐 Hardening Security & Access Control",
+    "question": "52. Why is local user database management strongly discouraged inside a production Jenkins controller?",
+    "options": [
+      "Local user accounts consume excessive JVM heap memory and cause garbage collection delays.",
+      "Local accounts lack central Multi-Factor Authentication (MFA) and centralized audit trails; production demands identity federation via SAML 2.0 or OIDC.",
+      "Local accounts prevent Jenkins from running Declarative Pipelines.",
+      "Local accounts automatically grant full administrative access to all authenticated users."
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "jenkins",
+    "subjectLabel": "🔐 Hardening Security & Access Control",
+    "question": "53. How does Folder-Level Role-Based Access Control (RBAC) enforce the Principle of Least Privilege across multi-project teams?",
+    "options": [
+      "By mapping permissions using folder regular expressions (e.g., 'orion-.*'), restricting developers to their team's project scope.",
+      "By assigning global administrative rights to every developer in the organization.",
+      "By requiring multi-factor authentication before every single build execution.",
+      "By disabling read permissions for all non-administrative users across the entire controller."
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "jenkins",
+    "subjectLabel": "🔐 Hardening Security & Access Control",
+    "question": "54. How does the `withCredentials` pipeline wrapper act as a security nudge during build execution?",
+    "options": [
+      "It forces developers to type their passwords directly into the build console input.",
+      "It dynamically binds secrets to runtime environment variables while automatically masking sensitive strings ('****') in console logs.",
+      "It writes secrets to a temporary plain-text file in the workspace directory.",
+      "It automatically rotates AWS IAM keys every 5 minutes during execution."
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "jenkins",
+    "subjectLabel": "📜 Declarative Pipelines & Shared Libraries",
+    "question": "55. Why do production engineering standards mandate Declarative `Jenkinsfile` definitions over GUI-based Freestyle jobs?",
+    "options": [
+      "Declarative jobs run 10x faster than Freestyle jobs because they skip Java compilation.",
+      "Freestyle jobs cannot be executed on remote build agents.",
+      "Declarative pipelines live in SCM, undergo peer code reviews, support multibranch discovery, and enforce structured error handling.",
+      "Declarative syntax allows developers to write raw shell scripts without needing version control."
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "jenkins",
+    "subjectLabel": "📜 Declarative Pipelines & Shared Libraries",
+    "question": "56. How do Jenkins Shared Libraries (`vars/`) apply the KISS principle across enterprise microservice fleets?",
+    "options": [
+      "They encapsulate repetitive build, test, and notification logic into central Groovy steps, keeping application `Jenkinsfile` definitions under 5 lines.",
+      "They replace all `Jenkinsfile` definitions with a single XML configuration file.",
+      "They allow developers to run builds without needing a Jenkins controller.",
+      "They automatically convert Groovy code into compiled C++ binaries."
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "jenkins",
+    "subjectLabel": "📜 Declarative Pipelines & Shared Libraries",
+    "question": "57. In the Monk tradition of 'Shuddhi' (purity), why is calling `cleanWs()` inside the pipeline `post` block essential?",
+    "options": [
+      "It deletes the pipeline definition from version control to prevent unauthorized access.",
+      "It resets the Jenkins controller configuration back to default settings.",
+      "It clears all historical build logs from the Prometheus metrics endpoint.",
+      "It guarantees that worker agents purge temporary build files, cached credentials, and workspace residue before returning to the executor pool."
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "jenkins",
+    "subjectLabel": "⚡ Ephemeral Agents & Execution Scaling",
+    "question": "58. How does the Monk concept of 'Anitya' (impermanence) eliminate fragile 'snowflake' build servers?",
+    "options": [
+      "By running all build workloads inside static long-lived virtual machines that are never rebooted.",
+      "By replacing all Linux servers with permanent Windows virtual machines.",
+      "By treating worker agents as disposable, single-use containers that spin up on demand, execute isolated tasks, and self-destruct.",
+      "By disabling build agent auto-scaling during business hours."
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "jenkins",
+    "subjectLabel": "⚡ Ephemeral Agents & Execution Scaling",
+    "question": "59. What is a key architectural benefit of running integration tests inside a Kubernetes Pod template with sidecar containers?",
+    "options": [
+      "Application code and ephemeral database sidecars (e.g., PostgreSQL) run within the same pod boundary on `localhost`, isolated from other builds.",
+      "Sidecar containers automatically bypass network security firewalls.",
+      "Pod templates eliminate the need for container images.",
+      "Integration test sidecars can run without consuming CPU or memory resources."
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "jenkins",
+    "subjectLabel": "⚡ Ephemeral Agents & Execution Scaling",
+    "question": "60. How can dynamic ephemeral agents achieve rapid compilation speeds without preserving state across builds?",
+    "options": [
+      "By disabling unit tests during peak production hours.",
+      "By mounting persistent host cache directories (e.g., `~/.m2`, `~/.ccache`) into the ephemeral container spec.",
+      "By running builds directly inside the Jenkins controller JVM memory.",
+      "By storing all project source code inside Docker image layers."
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "jenkins",
+    "subjectLabel": "⚙️ Administration & Configuration as Code (JCasC)",
+    "question": "61. What is the fundamental rule of Jenkins Configuration as Code (JCasC)?",
+    "options": [
+      "All plugin installations must be configured manually using the Jenkins GUI.",
+      "System configurations must be split across at least 10 separate XML files.",
+      "If a system setting is not explicitly declared in `jenkins.yaml`, it does not exist—the GUI becomes a read-only dashboard.",
+      "JCasC can only be used on single-node bare-metal installations."
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "jenkins",
+    "subjectLabel": "⚙️ Administration & Configuration as Code (JCasC)",
+    "question": "62. How does pinning plugin versions in a `plugins.txt` file enforce system reproducibility?",
+    "options": [
+      "It allows Jenkins to download unreleased experimental plugins automatically.",
+      "It guarantees identical, battle-tested plugin dependency trees across all regional controllers using `jenkins-plugin-cli` during image assembly.",
+      "It prevents developers from modifying application source code in SCM.",
+      "It disables plugin security warnings in the admin console."
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "jenkins",
+    "subjectLabel": "⚙️ Administration & Configuration as Code (JCasC)",
+    "question": "63. How do `/quietDown` and `/safeRestart` endpoints facilitate peaceful controller maintenance?",
+    "options": [
+      "`/quietDown` blocks new incoming jobs to drain active queues gracefully, allowing running pipelines to finish before `/safeRestart` reboots the server.",
+      "`/quietDown` immediately kills all running processes and wipes the `/var/jenkins_home` directory.",
+      "`/quietDown` turns off log output to save disk space during active builds.",
+      "`/quietDown` pauses all webhooks permanently until manually cleared in the GUI."
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "jenkins",
+    "subjectLabel": "📊 Production Operations & Resilience",
+    "question": "64. Which three high-signal metrics best reflect a calm, healthy, and responsive Jenkins controller?",
+    "options": [
+      "Total Lines of Code Written, Git Commits per Day, and Slack Message Count",
+      "Number of Installed Plugins, Total User Accounts, and Workspace Disk Usage",
+      "Build Queue Wait Time, Controller JVM Memory/CPU Utilization, and Active Executor Saturation",
+      "HTTP 200 Response Count, Docker Image Size, and Webhook Retry Frequency"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "jenkins",
+    "subjectLabel": "📊 Production Operations & Resilience",
+    "question": "65. Why set initial heap (`-Xms`) equal to max heap (`-Xmx`) when configuring Jenkins with the G1GC garbage collector?",
+    "options": [
+      "It allows Java to allocate unlimited RAM during build spikes.",
+      "It eliminates dynamic heap resizing overhead and significantly reduces stop-the-world Garbage Collection pauses.",
+      "It disables garbage collection entirely during business hours.",
+      "It forces Jenkins to run strictly inside swap memory."
+    ],
+    "answer": 1
+  },
+  {
+    subject: "gitlab-ci",
+    subjectLabel: "🦊 GitLab CI Production Grade",
+    question: "66. Under the 'Context of Monks' and Principle of Least Privilege, which GitLab role should be assigned to external auditors who need to review repository code and build execution logs without altering code?",
+    options: [
+      "Guest",
+      "Developer",
+      "Reporter",
+      "Maintainer"
+    ],
+    answer: 2
+  },
+  {
+    subject: "gitlab-ci",
+    subjectLabel: "🦊 GitLab CI Production Grade",
+    question: "67. To follow the KISS Principle in group hierarchy design, how should top-level sub-groups be structured across an enterprise?",
+    options: [
+      "By core business capability/domain rather than temporary project codes",
+      "By individual developer personal names to maximize freedom",
+      "By deeply nesting 15 levels of sub-groups for every micro-feature",
+      "By creating a flat list of 5,000 unorganized repositories under one user"
+    ],
+    answer: 0
+  },
+  {
+    subject: "gitlab-ci",
+    subjectLabel: "🦊 GitLab CI Production Grade",
+    question: "68. Applying Nudge Theory to token governance, why are Project Access Tokens preferred over Personal Access Tokens for pipeline automation bots?",
+    options: [
+      "They give global root admin privileges across the entire GitLab instance",
+      "They never expire and cannot be revoked by administrators",
+      "They bypass all branch protection rules and security scanning gates",
+      "They are scoped strictly to a single project and terminate automatically if the repository is archived"
+    ],
+    answer: 3
+  },
+  {
+    subject: "gitlab-ci",
+    subjectLabel: "🦊 GitLab CI Production Grade",
+    question: "69. Why does the Shell executor violate the Monk context of 'stateless purity' in production microservice pipelines?",
+    options: [
+      "It runs builds inside ephemeral Kubernetes pods that auto-delete",
+      "It executes commands directly on the host OS, leaving residual files and state that contaminate future builds",
+      "It enforces Docker container isolation for every job",
+      "It automatically encrypts all local host directories upon exit"
+    ],
+    answer: 1
+  },
+  {
+    subject: "gitlab-ci",
+    subjectLabel: "🦊 GitLab CI Production Grade",
+    question: "70. What prefix is used by modern, secure GitLab runner authentication tokens to replace legacy registration tokens?",
+    options: [
+      "glpat-",
+      "glcft-",
+      "glrt-",
+      "glsast-"
+    ],
+    answer: 2
+  },
+  {
+    subject: "gitlab-ci",
+    subjectLabel: "🦊 GitLab CI Production Grade",
+    question: "71. Under the KISS Principle, how should build toolchains (like JDKs, Node.js, or GCC) be managed across runner hosts?",
+    options: [
+      "Manually install every compiler version directly on the bare-metal runner host",
+      "Package the required build environment inside versioned Docker container images",
+      "Write 500-line shell scripts inside every job to compile GCC from source",
+      "Store compiler binaries in unencrypted personal access token repositories"
+    ],
+    answer: 1
+  },
+  {
+    subject: "gitlab-ci",
+    subjectLabel: "🦊 GitLab CI Production Grade",
+    question: "72. Which `.gitlab-ci.yml` keyword allows a downstream job to start immediately as soon as its prerequisite finishes, bypassing traditional stage boundaries?",
+    options: [
+      "extends:",
+      "include:",
+      "inherit:",
+      "needs:"
+    ],
+    answer: 3
+  },
+  {
+    subject: "gitlab-ci",
+    subjectLabel: "🦊 GitLab CI Production Grade",
+    question: "73. What is the primary architectural difference between GitLab CI Artifacts and Cache?",
+    options: [
+      "Artifacts pass intermediate build outputs between stages in a single pipeline run, while Cache reuses external dependencies across runs",
+      "Artifacts preserve third-party packages across pipeline runs, while Cache passes outputs between stages",
+      "Artifacts are stored permanently in git history, while Cache exists only in RAM",
+      "Artifacts can only be created on Shell executors, while Cache requires Kubernetes"
+    ],
+    answer: 0
+  },
+  {
+    subject: "gitlab-ci",
+    subjectLabel: "🦊 GitLab CI Production Grade",
+    question: "74. How does Nudge Theory streamline dependency caching in Maven or Node.js pipelines?",
+    options: [
+      "By prompting developers to upload zip files manually after every commit",
+      "By keying the cache on lockfile hashes (pom.xml or package-lock.json) so dependency reuse happens automatically",
+      "By deleting the cache every 5 minutes regardless of build activity",
+      "By forcing every job to re-download all dependencies from public mirrors"
+    ],
+    answer: 1
+  },
+  {
+    subject: "gitlab-ci",
+    subjectLabel: "🦊 GitLab CI Production Grade",
+    question: "75. What group-level housekeeping policy prevents object storage bloat from accumulating old build outputs?",
+    options: [
+      "Force Retain All Artifacts forever",
+      "Disable Object Storage entirely",
+      "Keep Latest Artifact policy",
+      "Delete repository git history on every push"
+    ],
+    answer: 2
+  },
+  {
+    subject: "gitlab-ci",
+    subjectLabel: "🦊 GitLab CI Production Grade",
+    question: "76. How can platform administrators prevent a single resource-intensive repository from starving other projects of runner compute?",
+    options: [
+      "By granting unlimited root access to all users",
+      "By disabling runner tags across the entire instance",
+      "By converting all Docker executors to bare-metal Shell runners",
+      "By establishing monthly compute minute quotas and job concurrency ceilings at the sub-group level"
+    ],
+    answer: 3
+  },
+  {
+    subject: "gitlab-ci",
+    subjectLabel: "🦊 GitLab CI Production Grade",
+    question: "77. In the context of automated housekeeping, how should ephemeral or offline runner nodes be handled when they stop reporting heartbeats?",
+    options: [
+      "Automatically unregister offline runners using API cleanup scripts after a designated stale threshold",
+      "Leave them registered indefinitely to accumulate job queues",
+      "Reboot the master GitLab database server every hour",
+      "Increase job timeout limits to 48 hours for all pending jobs"
+    ],
+    answer: 0
+  },
+  {
+    subject: "gitlab-ci",
+    subjectLabel: "🦊 GitLab CI Production Grade",
+    question: "78. What happens when a CI/CD variable is configured with the 'Masked' attribute in GitLab?",
+    options: [
+      "The variable is deleted immediately after the pipeline starts",
+      "Its value is automatically obfuscated as [MASKED] in console job logs if accidentally printed",
+      "It can only be viewed by Guest users in the repository UI",
+      "It is appended to every commit message automatically"
+    ],
+    answer: 1
+  },
+  {
+    subject: "gitlab-ci",
+    subjectLabel: "🦊 GitLab CI Production Grade",
+    question: "79. What restriction does the 'Protected Variable' flag impose on pipeline execution?",
+    options: [
+      "The variable is only accessible to jobs running on Protected Branches or Protected Tags",
+      "The variable can only be used inside docker-in-docker containers",
+      "The variable is visible to all public pull requests from external forks",
+      "The variable expires automatically after 60 seconds"
+    ],
+    answer: 0
+  },
+  {
+    subject: "gitlab-ci",
+    subjectLabel: "🦊 GitLab CI Production Grade",
+    question: "80. Applying the KISS Principle to security scanning, how should SAST and Secret Detection be enabled in `.gitlab-ci.yml`?",
+    options: [
+      "By writing custom regex parsing scripts in Python for every repository",
+      "By manually executing external commercial scanners on local developer laptops",
+      "By including official GitLab Security Templates via a single 'include:' statement",
+      "By disabling all automated checks and relying on annual manual audits"
+    ],
+    answer: 2
+  },
+  {
+    subject: "gitlab-ci",
+    subjectLabel: "🦊 GitLab CI Production Grade",
+    question: "81. How does OIDC (OpenID Connect) integration with HashiCorp Vault enhance pipeline secret security?",
+    options: [
+      "It hardcodes long-lived root passwords directly into .gitlab-ci.yml",
+      "It bypasses all network firewalls and SSL certificate checks",
+      "It fetches dynamic, short-lived credentials for pipeline jobs without storing static passwords in GitLab",
+      "It automatically emails private keys to all group members upon job completion"
+    ],
+    answer: 2
+  },
+  {
+    subject: "gitlab-ci",
+    subjectLabel: "🦊 GitLab CI Production Grade",
+    question: "82. What is the role of a `.gitlab/CODEOWNERS` file in production deployment governance?",
+    options: [
+      "It automatically assigns user billing rates to individual lines of code",
+      "It enforces mandatory code owner reviews and approvals before changes to sensitive files or paths can be merged",
+      "It converts all YAML files into executable bash scripts",
+      "It grants Guest users write access to the main branch"
+    ],
+    answer: 1
+  },
+  {
+    subject: "gitlab-ci",
+    subjectLabel: "🦊 GitLab CI Production Grade",
+    question: "83. What is the purpose of the `default:` block in `.gitlab-ci.yml`?",
+    options: [
+      "To define fallback settings like base container images, retries, and timeouts across all jobs",
+      "To override all variable values with blank strings",
+      "To force all jobs to run sequentially without parallel execution",
+      "To lock the git repository against further commits"
+    ],
+    answer: 0
+  },
+  {
+    subject: "gitlab-ci",
+    subjectLabel: "🦊 GitLab CI Production Grade",
+    question: "84. Which executor type dynamically provisions ephemeral Kubernetes Pods on demand for high-volume enterprise pipelines?",
+    options: [
+      "Shell Executor",
+      "VirtualBox Executor",
+      "SSH Executor",
+      "Kubernetes Executor"
+    ],
+    answer: 3
+  },
+  {
+    subject: "gitlab-ci",
+    subjectLabel: "🦊 GitLab CI Production Grade",
+    question: "85. How does a Protected Environment with `when: manual` nudge teams toward safe production deployments?",
+    options: [
+      "By triggering automatic deployments on every broken commit",
+      "By requiring explicit manual approval and authorized user roles before executing live environment deployments",
+      "By deleting staging databases automatically prior to release",
+      "By skipping all unit tests during production deployment"
+    ],
+    answer: 1
   }
   ];
 
@@ -600,6 +1080,8 @@
             <option value="multistage">🛠️ Multi-Stage Builds & Compose (4 Qs)</option>
             <option value="security">🔒 Advanced Security & Hardening (3 Qs)</option>
             <option value="change_governance">🧘 AI-Assisted Change Governance (35 Qs)</option>
+            <option value="jenkins">🎩 Jenkins CI/CD Fundamentals & Production-Grade Setup</option>
+            <option value="gitlab-ci">🦊 GitLab CI</option>
           </select>
         </div>
 
