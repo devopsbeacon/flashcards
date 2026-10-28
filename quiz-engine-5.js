@@ -986,6 +986,726 @@
       "By skipping all unit tests during production deployment"
     ],
     answer: 1
+  },
+    {
+    "subject": "azure-devops",
+    "subjectLabel": "☁️ Azure DevOps Production-Grade Mastery",
+    "question": "86. According to the Indian Monk principle of 'Aparigraha' in Azure DevOps, how should user identities and access be managed to maintain a clean, zero-trust foundation?",
+    "options": [
+      "By creating local administrative accounts directly inside each Azure DevOps project for quick emergency access",
+      "By connecting Azure DevOps directly to Azure Entra ID and automating entitlements using group rules rather than unlinked local accounts",
+      "By distributing personal access tokens (PATs) with long expiration periods to avoid re-authentication friction",
+      "By assigning individual permissions to each developer based on their current active tasks"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "azure-devops",
+    "subjectLabel": "☁️ Azure DevOps Production-Grade Mastery",
+    "question": "87. Which Azure DevOps organization policy configuration acts as a subtle 'Nudge' to prevent accidental code exposure and force workload identity usage?",
+    "options": [
+      "Disabling public projects, restricting project creation, and disallowing PAT creation for non-admin users",
+      "Mandating weekly password changes for all developers in the organization",
+      "Disabling all pipeline build validation checks across repositories",
+      "Allowing public access to all repository branches while requiring email notifications"
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "azure-devops",
+    "subjectLabel": "☁️ Azure DevOps Production-Grade Mastery",
+    "question": "88. How does Just-In-Time (JIT) elevation via Entra ID Privileged Identity Management (PIM) eliminate standing admin privilege risks?",
+    "options": [
+      "It auto-approves all admin requests without requiring multi-factor authentication",
+      "It grants permanent admin rights but logs every action to a text file on a local server",
+      "It grants temporary, time-bounded elevation requiring MFA and ticket references, leaving zero static admin accounts",
+      "It rotates static passwords every 24 hours while keeping user permissions active indefinitely"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "azure-devops",
+    "subjectLabel": "☁️ Azure DevOps Production-Grade Mastery",
+    "question": "89. In the context of 'Eka Vriksha' and the KISS principle, why is Trunk-Based Development preferred over legacy multi-branch GitFlow?",
+    "options": [
+      "Because it requires developers to maintain release, hotfix, feature, and develop branches simultaneously",
+      "Because direct commits to the 'main' branch speed up deployment times during peak business hours",
+      "Because it prevents automated CI pipelines from running unit tests on pull requests",
+      "Because it eliminates cognitive clutter by using short-lived feature branches that squash-merge directly into the sacred 'main' trunk"
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "azure-devops",
+    "subjectLabel": "☁️ Azure DevOps Production-Grade Mastery",
+    "question": "90. How do Azure Repos branch policies nudge developers toward high-quality, audited code before merging into 'main'?",
+    "options": [
+      "By sending automated reminder emails every morning to complete pending pull requests",
+      "By disabling the 'Complete PR' button until mandatory build validation checks pass, work items are linked, and required reviewers approve",
+      "By automatically deleting feature branches if a build failure occurs during compilation",
+      "By allowing developers to approve their own pull requests if they pass local unit tests"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "azure-devops",
+    "subjectLabel": "☁️ Azure DevOps Production-Grade Mastery",
+    "question": "91. How does Advanced Security Push Protection in Azure Repos uphold repository hygiene when a developer commits an API token?",
+    "options": [
+      "It accepts the push but silently emails the security team 24 hours later",
+      "It intercepts the 'git push' command at the local terminal and rejects the push instantly if unencrypted credentials are detected",
+      "It automatically encrypts the secret and replaces it with a placeholder in the repository history",
+      "It creates a new branch named 'security-fix' and commits the secret there automatically"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "azure-devops",
+    "subjectLabel": "☁️ Azure DevOps Production-Grade Mastery",
+    "question": "92. Why are declarative YAML pipelines described as 'Sutras' in the Monk's DevOps philosophy compared to Classic visual UI pipelines?",
+    "options": [
+      "Because visual UI pipelines offer better version control history and branch isolation",
+      "Because Classic UI pipelines automatically update when new cloud resources are provisioned in Azure",
+      "Because YAML pipelines are succinct, version-controlled text instructions living alongside code, preventing silent configuration drift",
+      "Because YAML scripts require complex visual drag-and-drop interfaces to compile properly"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "azure-devops",
+    "subjectLabel": "☁️ Azure DevOps Production-Grade Mastery",
+    "question": "93. What is the primary operational advantage of using Workload Identity Federation (OIDC) for Azure Service Connections over static Service Principal keys?",
+    "options": [
+      "It exchanges short-lived, federated tokens dynamically per pipeline run, eliminating static passwords, rotation overhead, and secret leaks",
+      "It requires storing client secrets inside Azure Key Vault with 90-day rotation schedules",
+      "It bypasses Azure Entra ID role-based access control to accelerate deployment speeds",
+      "It allows pipelines to authenticate using unencrypted local SSH keys stored on build agents"
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "azure-devops",
+    "subjectLabel": "☁️ Azure DevOps Production-Grade Mastery",
+    "question": "94. How does modular template composition keep microservice YAML pipelines under 15 lines of code while enforcing enterprise build standards?",
+    "options": [
+      "By embedding inline bash scripts directly into every repository's root YAML file",
+      "By storing pipeline settings in external spreadsheets uploaded to Azure Blob Storage",
+      "By centralizing compilation, security scanning, and testing steps into reusable template files referenced by application repositories",
+      "By skipping compilation steps and running unit tests directly inside production container instances"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "azure-devops",
+    "subjectLabel": "☁️ Azure DevOps Production-Grade Mastery",
+    "question": "95. What does the monastic concept of 'Gupteya' represent when architecting application secrets in cloud environments?",
+    "options": [
+      "Storing secrets in plain-text appsettings.json files protected by operating system file permissions",
+      "Printing dynamic secret values to pipeline stdout logs during debugging sessions to confirm connection strings",
+      "Hardcoding connection keys directly inside Dockerfile environment variables",
+      "Treating secrets as invisible entities stored in a central Key Vault sanctuary, fetched dynamically in memory, and never logged or hardcoded"
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "azure-devops",
+    "subjectLabel": "☁️ Azure DevOps Production-Grade Mastery",
+    "question": "96. When linking an Azure Key Vault to an Azure DevOps Variable Group, how does the platform enforce the KISS principle during deployment runs?",
+    "options": [
+      "Developers must write custom PowerShell scripts in every pipeline step to fetch secrets using REST APIs",
+      "Secrets are automatically abstracted into pipeline environment variables without requiring custom secret-retrieval code in application scripts",
+      "Secrets are downloaded to a text file on the agent's workspace folder before execution begins",
+      "Secrets are hardcoded into the pipeline's YAML source file during pull request reviews"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "azure-devops",
+    "subjectLabel": "☁️ Azure DevOps Production-Grade Mastery",
+    "question": "97. What automatic security guardrail does Azure DevOps execute if a deployment script accidentally echoes a Key Vault variable to standard console output?",
+    "options": [
+      "It terminates the entire Azure DevOps organization immediately",
+      "It emails the plain-text secret value to all organization administrators for verification",
+      "It writes the unmasked secret into the repository's main branch commit history",
+      "It automatically intercepts the output stream and converts the secret value into '***' in the console logs"
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "azure-devops",
+    "subjectLabel": "☁️ Azure DevOps Production-Grade Mastery",
+    "question": "98. Viewing the Production Environment as a 'Garbhagriha' (Sacred Threshold) implies that releases must be governed by:",
+    "options": [
+      "Instant, manual overrides by any developer during emergency hotfix scenarios",
+      "Unrestricted continuous deployment scripts running straight from experimental feature branches",
+      "Silent, automated health guardians and policy checks that verify stability before allowing passage into live environments",
+      "Weekly manual email confirmations sent to team leads after code is deployed to live users"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "azure-devops",
+    "subjectLabel": "☁️ Azure DevOps Production-Grade Mastery",
+    "question": "99. How do automated Azure Monitor gates nudge engineering teams away from tiredness-induced 'rubber-stamping' of manual approvals?",
+    "options": [
+      "They automatically query telemetry like Application Insights and abort the release if staging error spikes are detected, before notifying a human approver",
+      "They send SMS notifications every 5 minutes until an engineer manually approves the release",
+      "They automatically approve all production releases if no team member responds within 15 minutes",
+      "They require four different human managers to sign off on physical paper documents before deployment"
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "azure-devops",
+    "subjectLabel": "☁️ Azure DevOps Production-Grade Mastery",
+    "question": "100. In a Canary deployment strategy, how does Azure Pipelines handle a failure during post-traffic routing synthetic health probes?",
+    "options": [
+      "It pauses the pipeline indefinitely until a developer logs into the server to debug",
+      "It completes the deployment to 100% of users and logs a warning message in Azure Monitor",
+      "It executes automated rollback steps defined in the YAML pipeline to safely revert traffic away from the canary slot",
+      "It deletes the target Azure Resource Group to prevent further traffic processing"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "azure-devops",
+    "subjectLabel": "☁️ Azure DevOps Production-Grade Mastery",
+    "question": "101. What happens when a developer attempts to run a YAML deployment pipeline targeting the 'Production' environment from a 'feature/test-patch' branch with Branch Control enabled for 'refs/heads/main'?",
+    "options": [
+      "The deployment runs successfully, but issues a warning banner in the pipeline dashboard",
+      "The feature branch is automatically merged into 'main' to satisfy the constraint",
+      "The pipeline creates a temporary production environment named 'Production-test-patch'",
+      "The deployment check fails automatically, preventing the pipeline from touching the Production environment"
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "azure-devops",
+    "subjectLabel": "☁️ Azure DevOps Production-Grade Mastery",
+    "question": "102. How is 'Sakshi Bhava' (Pure Witnessing) operationalized in Azure DevOps governance?",
+    "options": [
+      "By manually inspecting pipeline logs once every month during scheduled maintenance windows",
+      "By streaming all organization audit events and pipeline telemetry in real time to a centralized Log Analytics Workspace",
+      "By requiring developers to capture screenshots of successful deployment runs",
+      "By disabling audit logging to reduce cloud storage costs and pipeline latency"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "azure-devops",
+    "subjectLabel": "☁️ Azure DevOps Production-Grade Mastery",
+    "question": "103. How does a scheduled nightly Terraform 'dry-run' pipeline act as an automated nudge against configuration drift?",
+    "options": [
+      "It automatically updates Git source code to match whatever manual tweaks engineers made in the Azure Portal",
+      "It compares running cloud infrastructure against Git declarative state and alerts engineers if unauthorized manual portal changes occurred",
+      "It deletes any cloud resource that was created more than 7 days ago",
+      "It shuts down all production virtual machines during off-peak hours to save costs"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "azure-devops",
+    "subjectLabel": "☁️ Azure DevOps Production-Grade Mastery",
+    "question": "104. Which daily hygiene practice aligns with the Monk Mindset to keep an Azure DevOps project free of operational entropy?",
+    "options": [
+      "Automatically deleting head branches post-PR completion, revoking idle PATs, and purging orphaned preview environments",
+      "Retaining all completed feature branches indefinitely in Git for historical tracking",
+      "Granting permanent Organization Owner privileges to all team members to avoid ticket bottlenecks",
+      "Keeping legacy visual Classic pipelines active alongside new YAML pipelines for backup"
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "azure-devops",
+    "subjectLabel": "☁️ Azure DevOps Production-Grade Mastery",
+    "question": "105. What is the ultimate goal of combining the Monk Mindset, KISS Principle, and Nudge Theory in production-grade Azure DevOps architecture?",
+    "options": [
+      "To maximize the number of manual approval gates and visual UI configuration screens",
+      "To build complex, multi-layered permission matrices that require dedicated administration teams",
+      "To create a quiet, zero-drift, highly automated environment where the secure, compliant path is the easiest default choice for developers",
+      "To eliminate CI/CD automation and rely purely on local terminal scripts executed by senior architects"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "sast_sonarqube",
+    "subjectLabel": "🧘‍♂️ Mindful SAST & Production SonarQube",
+    "question": "106. In the context of Part 1, how does the Indian Monk principle of 'Svadhyaya' reframe Static Application Security Testing (SAST)?",
+    "options": [
+      "As a high-pressure audit designed to penalize developers for past mistakes",
+      "As a daily, non-judgmental ritual of self-inspection and peaceful reflection on source code",
+      "As a mandatory compliance check executed right before production deployment",
+      "As an automated tool that automatically rewrites all developer code"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "sast_sonarqube",
+    "subjectLabel": "🧘‍♂️ Mindful SAST & Production SonarQube",
+    "question": "107. Which security analysis methodology specifically inspects raw source code for flaws without executing the application?",
+    "options": [
+      "DAST (Dynamic Application Security Testing)",
+      "SCA (Software Composition Analysis)",
+      "SAST (Static Application Security Testing)",
+      "IAST (Interactive Application Security Testing)"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "sast_sonarqube",
+    "subjectLabel": "🧘‍♂️ Mindful SAST & Production SonarQube",
+    "question": "108. How does 'Shift-Left' security apply the KISS Principle to reduce software defects?",
+    "options": [
+      "By deferring security testing until the night before production release",
+      "By catching and fixing vulnerabilities early in the IDE or commit phase when fixes are simplest",
+      "By removing all unit tests to speed up CI/CD build execution",
+      "By enforcing 4,000 default security rules on every pull request"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "sast_sonarqube",
+    "subjectLabel": "🧘‍♂️ Mindful SAST & Production SonarQube",
+    "question": "109. In Part 2, how does Nudge Theory guide technical debt management in SonarQube?",
+    "options": [
+      "By forcing developers to clear all 10 years of historical technical debt in a single sprint",
+      "By publicly emailing management whenever a developer introduces a code smell",
+      "By privately alerting developers to issues in their current pull request diff using 'Clean as You Code'",
+      "By locking developer repositories whenever test coverage drops below 95%"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "sast_sonarqube",
+    "subjectLabel": "🧘‍♂️ Mindful SAST & Production SonarQube",
+    "question": "110. Which spiritual concept from Indian philosophy underpins 'Clean as You Code' by emphasizing present-moment focus over past burdens?",
+    "options": [
+      "Karma Yoga and Vartaman (Focusing entirely on today's action)",
+      "Samsara (Endless cycle of build failures)",
+      "Tapas (Punishing developers for broken builds)",
+      "Moksha (Deleting the repository to eliminate technical debt)"
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "sast_sonarqube",
+    "subjectLabel": "🧘‍♂️ Mindful SAST & Production SonarQube",
+    "question": "111. Why is SonarQube's default embedded H2 database strictly prohibited in production environments?",
+    "options": [
+      "It does not support Java microservices",
+      "It requires a paid license for open-source projects",
+      "It forces Nginx reverse proxies to crash",
+      "It cannot handle concurrent connections, lacks migration paths, and easily corrupts during ungraceful shutdowns"
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "sast_sonarqube",
+    "subjectLabel": "🧘‍♂️ Mindful SAST & Production SonarQube",
+    "question": "112. Which Linux host kernel parameter MUST be tuned to at least 524288 to prevent internal Elasticsearch memory allocation crashes in SonarQube?",
+    "options": [
+      "net.ipv4.ip_forward",
+      "vm.max_map_count",
+      "fs.file-max",
+      "kernel.pid_max"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "sast_sonarqube",
+    "subjectLabel": "🧘‍♂️ Mindful SAST & Production SonarQube",
+    "question": "113. In a production Nginx reverse proxy setup for SonarQube, what is the primary purpose of setting 'client_max_body_size 100M;'?",
+    "options": [
+      "To allow large source code analysis payloads and reports to be uploaded by scanner pipelines",
+      "To increase database query execution speed",
+      "To restrict user file downloads from the SonarQube web UI",
+      "To allocate 100MB of RAM to Elasticsearch"
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "sast_sonarqube",
+    "subjectLabel": "🧘‍♂️ Mindful SAST & Production SonarQube",
+    "question": "114. How does the monastic principle of 'Viveka' (Discernment) apply to SonarQube Quality Profiles?",
+    "options": [
+      "Enabling all 4,000 available default rules to maximize report length",
+      "Ignoring all security vulnerabilities and tracking only code formatting",
+      "Separating the essential from non-essential by disabling noisy style warnings and focusing on critical OWASP vulnerabilities",
+      "Deleting all custom Quality Profiles and using default read-only profiles"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "sast_sonarqube",
+    "subjectLabel": "🧘‍♂️ Mindful SAST & Production SonarQube",
+    "question": "115. Which set of Quality Gate conditions best represents the 'Clean as You Code' production standard for New Code?",
+    "options": [
+      "100% Coverage on Legacy Code, 0 Code Smells across 10 years of history",
+      "0 New Vulnerabilities, 0 New Hotspots, >80% Coverage on New Code",
+      "5 New Vulnerabilities allowed, 50% Coverage on New Code",
+      "0 Code Smells on Legacy Code, 0 Unit Tests required on New Code"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "sast_sonarqube",
+    "subjectLabel": "🧘‍♂️ Mindful SAST & Production SonarQube",
+    "question": "116. How can developers prevent auto-generated Maven build files (e.g. under 'target/generated-sources') from triggering false positives in SonarQube?",
+    "options": [
+      "By deleting the pom.xml file before scanning",
+      "By disabling Java analysis entirely in Quality Profiles",
+      "By adding 'sonar.exclusions=**/target/generated-sources/**' in sonar-project.properties",
+      "By increasing the host memory limit to 64GB"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "sast_sonarqube",
+    "subjectLabel": "🧘‍♂️ Mindful SAST & Production SonarQube",
+    "question": "117. In Part 5, what does the concept of 'Sahaja' (Effortless Flow) represent in DevSecOps?",
+    "options": [
+      "Manually running scans from a desktop terminal once per quarter",
+      "Bypassing security checks when pipelines take longer than 30 seconds",
+      "Writing custom security scripts for every individual microservice",
+      "Automating security scans seamlessly within CI/CD pipelines so code analysis happens naturally on every push"
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "sast_sonarqube",
+    "subjectLabel": "🧘‍♂️ Mindful SAST & Production SonarQube",
+    "question": "118. What behavioral advantage does Pull Request (PR) Decoration provide over traditional PDF security reports?",
+    "options": [
+      "It sends SMS alerts to project managers whenever a build fails",
+      "It delivers inline, actionable feedback directly on the specific lines of code changed inside GitHub/GitLab PR diffs",
+      "It automatically merges pull requests without human review",
+      "It hides vulnerability details from developers to prevent panic"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "sast_sonarqube",
+    "subjectLabel": "🧘‍♂️ Mindful SAST & Production SonarQube",
+    "question": "119. In a GitHub Actions pipeline, what parameter ensures SonarScanner waits for the Quality Gate result before proceeding?",
+    "options": [
+      "-Dsonar.failOnWarning=true",
+      "-Dsonar.blockPipeline=always",
+      "-Dsonar.qualitygate.wait=true",
+      "-Dsonar.sync=force"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "sast_sonarqube",
+    "subjectLabel": "🧘‍♂️ Mindful SAST & Production SonarQube",
+    "question": "120. In FinTech applications, which vulnerability type is caught by SAST when user inputs are directly concatenated into SQL strings?",
+    "options": [
+      "SQL Injection (OWASP A03)",
+      "Cross-Site Request Forgery (CSRF)",
+      "Insecure Direct Object Reference (IDOR)",
+      "Broken Object Level Authorization"
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "sast_sonarqube",
+    "subjectLabel": "🧘‍♂️ Mindful SAST & Production SonarQube",
+    "question": "121. In healthcare applications subject to HIPAA, why does SonarQube flag logging raw patient objects as a Security Hotspot?",
+    "options": [
+      "Because log files run out of disk space quickly",
+      "Because logging Personally Identifiable Information (PII/PHI) exposes sensitive medical data in plain text logs",
+      "Because logging slows down Java database connection pools",
+      "Because Python logging functions are deprecated"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "sast_sonarqube",
+    "subjectLabel": "🧘‍♂️ Mindful SAST & Production SonarQube",
+    "question": "122. Why is 'fetch-depth: 0' required when running 'actions/checkout@v4' in GitHub Actions for SonarQube analysis?",
+    "options": [
+      "To download all third-party Maven dependencies",
+      "To compile C++ extensions inside Docker containers",
+      "To fetch full git history so SonarQube can accurately calculate code diffs for 'Clean as You Code'",
+      "To enable SSL certificate verification"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "sast_sonarqube",
+    "subjectLabel": "🧘‍♂️ Mindful SAST & Production SonarQube",
+    "question": "123. How does caching '~/.m2/repository' and '~/.sonar/cache' in CI/CD pipelines adhere to the KISS principle?",
+    "options": [
+      "It speeds up pipeline execution times by avoiding redundant dependency downloads",
+      "It eliminates the need for PostgreSQL database backends",
+      "It automatically resolves all OWASP vulnerabilities",
+      "It bypasses Quality Gate evaluation on pull requests"
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "sast_sonarqube",
+    "subjectLabel": "🧘‍♂️ Mindful SAST & Production SonarQube",
+    "question": "124. What is the primary difference between SAST and DAST?",
+    "options": [
+      "SAST tests open-source dependencies, while DAST tests Docker containers",
+      "SAST inspects raw source code without running it, while DAST tests a running application from the outside",
+      "SAST runs only in production, while DAST runs only on local laptops",
+      "SAST requires a running database, while DAST requires source code files"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "sast_sonarqube",
+    "subjectLabel": "🧘‍♂️ Mindful SAST & Production SonarQube",
+    "question": "125. Under the KISS Principle, what should a team do when faced with 15,000 legacy code smells on an existing project?",
+    "options": [
+      "Halt all feature development for 6 months to fix every smell",
+      "Delete the SonarQube project and rebuild the microservice from scratch",
+      "Apply Clean as You Code to block new issues while letting legacy debt decay organically as code is touched",
+      "Disable all security scanning across the company"
+    ],
+    "answer": 2
+  },
+{
+    "subject": "springboot",
+    "subjectLabel": "Mindful Maven & Build Execution",
+    "question": "126. Applying the Monk mindset of single-minded focus to Maven builds, what is the primary benefit of inheriting from 'spring-boot-starter-parent' in your pom.xml?",
+    "options": [
+      "It automatically connects your local machine to a remote production Kubernetes cluster.",
+      "It manages compatible dependency versions and compiler defaults without cluttering your build file.",
+      "It forces all REST controllers to execute in multi-threaded reactive mode.",
+      "It prevents developers from running unit tests locally."
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "springboot",
+    "subjectLabel": "Mindful Maven & Build Execution",
+    "question": "127. How does using the Maven Wrapper (`mvnw`) act as a behavioral nudge in a team development environment?",
+    "options": [
+      "It requires developers to manually download and configure Maven binaries on every machine.",
+      "It restricts code execution to Windows operating systems only.",
+      "It automatically compiles Java code into Python scripts.",
+      "It ensures every developer and CI/CD server uses the exact same Maven version automatically without environment setup friction."
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "springboot",
+    "subjectLabel": "Mindful Maven & Build Execution",
+    "question": "128. To practice uninterrupted focus (Context of Monks) during offline work, which Maven flag forces offline build resolution from your local `.m2` repository cache?",
+    "options": [
+      "mvn clean package -o",
+      "mvn clean package --no-cache",
+      "mvn clean package -fast",
+      "mvn clean package --skip-pom"
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "springboot",
+    "subjectLabel": "KISS REST Controllers & Endpoints",
+    "question": "129. Following the KISS principle in Spring Boot REST design, what is the core responsibility of the `@RestController` annotation?",
+    "options": [
+      "It automatically creates database tables and handles SQL transactions.",
+      "It configures Docker container port mappings on host machines.",
+      "It marks the class as an HTTP request handler that serializes return values directly into the response body.",
+      "It encrypts incoming HTTP headers using AES-256."
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "springboot",
+    "subjectLabel": "KISS REST Controllers & Endpoints",
+    "question": "130. Why are Java Records recommended for JSON DTO payloads in modern Spring Boot APIs when practicing clean code?",
+    "options": [
+      "They force Spring Boot to generate custom HTML frontend views.",
+      "They provide immutable data carriers with zero boilerplate getters, setters, or constructors.",
+      "They automatically translate REST calls into gRPC protocol buffers.",
+      "They require an external database driver to compile."
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "springboot",
+    "subjectLabel": "KISS REST Controllers & Endpoints",
+    "question": "131. Which annotation should be used to extract dynamic path parameters from an incoming URL like `/api/v1/greet/{learnerName}`?",
+    "options": [
+      "@RequestParam",
+      "@RequestBody",
+      "@ContextAttribute",
+      "@PathVariable"
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "springboot",
+    "subjectLabel": "The Green Safety Net & Isolated Testing",
+    "question": "132. How does `@WebMvcTest` embody the KISS principle when testing Spring Boot REST Controllers?",
+    "options": [
+      "It instantiates only the web layer in isolation without booting the full application context or backend services.",
+      "It deletes existing test databases before running tests.",
+      "It requires a live Kubernetes cluster to execute test cases.",
+      "It automatically skips all assertions to ensure 100% build success."
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "springboot",
+    "subjectLabel": "The Green Safety Net & Isolated Testing",
+    "question": "133. According to Nudge Theory, how does seeing rapid green test feedback in the terminal influence developer behavior?",
+    "options": [
+      "It encourages developers to avoid running builds altogether.",
+      "It creates confusion by masking underlying compiler warnings.",
+      "It offers immediate positive reinforcement, transforming testing into a rewarding habit of maintaining code quality.",
+      "It slows down the CI/CD pipeline by forcing manual code reviews."
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "springboot",
+    "subjectLabel": "The Green Safety Net & Isolated Testing",
+    "question": "134. When asserting JSON payload structures in a MockMvc test, which tool allows you to verify individual JSON fields like `$.serviceName` cleanly?",
+    "options": [
+      "RegEx Matcher",
+      "JsonPath",
+      "XPath Query",
+      "Jackson Parser Stream"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "springboot",
+    "subjectLabel": "Nudges, Defaults & Graceful Error Handling",
+    "question": "135. In `@RequestParam` annotations, how does setting `defaultValue = \"Seeker\"` serve as a gentle nudge for defensive API design?",
+    "options": [
+      "It prevents HTTP 400 Bad Request errors when clients omit optional query parameters.",
+      "It forces clients to pass authorization headers with every request.",
+      "It encrypts missing parameter values before saving to the database.",
+      "It automatically redirects traffic to a fallback microservice."
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "springboot",
+    "subjectLabel": "Nudges, Defaults & Graceful Error Handling",
+    "question": "136. Channeling the calm resilience of a Monk during unexpected API errors, what is the best practice for handling unhandled exceptions globally in Spring Boot?",
+    "options": [
+      "Let the application crash and print raw stack traces to the client browser.",
+      "Catch all exceptions inside a try-catch block in every controller method.",
+      "Disable error logging completely in application.properties.",
+      "Use `@RestControllerAdvice` to intercept exceptions globally and return structured JSON error payloads."
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "springboot",
+    "subjectLabel": "Nudges, Defaults & Graceful Error Handling",
+    "question": "137. When encountering `WebServerException: Port 8080 was already in use`, what is the most peaceful way to resolve the conflict without killing system processes?",
+    "options": [
+      "Reinstall the operating system.",
+      "Delete the target folder and rebuild the project.",
+      "Reconfigure `server.port=8081` in `application.properties` or pass `--server.port=8081` at execution.",
+      "Disable HTTP traffic in Spring Boot."
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "springboot",
+    "subjectLabel": "Zen Docker Containers & Multi-Stage Builds",
+    "question": "138. How does a multi-stage Dockerfile embody the Monk concept of 'carrying only what is necessary'?",
+    "options": [
+      "It packs both JDK compilers and database servers into the final runtime image.",
+      "It compiles code in an ephemeral builder stage and copies only the final executable JAR into a slim JRE runtime image.",
+      "It prevents Docker containers from stopping when fatal errors occur.",
+      "It requires developers to build JAR files manually on host machines before running Docker."
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "springboot",
+    "subjectLabel": "Zen Docker Containers & Multi-Stage Builds",
+    "question": "139. Why is `eclipse-temurin:17-jre-alpine` preferred over a full Ubuntu JDK image for production Spring Boot containers?",
+    "options": [
+      "It significantly reduces image size, lowers download times, and minimizes security attack surfaces.",
+      "It includes built-in graphical user interface (GUI) tools.",
+      "It automatically translates Java bytecode into C++ binaries.",
+      "It bypasses container security constraints in enterprise environments."
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "springboot",
+    "subjectLabel": "Spring Boot Actuator & Container Probes",
+    "question": "140. Which Spring Boot Actuator endpoint specifically reports whether the application is ready to accept live network traffic?",
+    "options": [
+      "/actuator/metrics",
+      "/actuator/info",
+      "/actuator/env",
+      "/actuator/health/readiness"
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "springboot",
+    "subjectLabel": "Spring Boot Actuator & Container Probes",
+    "question": "141. How does adding a native `HEALTHCHECK` directive in a Dockerfile nudge cloud infrastructure toward automated self-healing?",
+    "options": [
+      "It sends alert emails to developers whenever memory usage exceeds 50%.",
+      "It automatically fixes broken Java code inside the running container.",
+      "It allows Docker to continuously monitor application status and mark or restart unresponsive containers automatically.",
+      "It disables HTTP ports when traffic levels become too high."
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "springboot",
+    "subjectLabel": "Declarative Kubernetes Orchestration",
+    "question": "142. In Kubernetes, what distinguishes the declarative approach (Monk mindset) from imperative container management?",
+    "options": [
+      "You execute manual terminal commands every time a pod crashes.",
+      "You define the desired end state in YAML manifests, and the cluster continuously maintains that state automatically.",
+      "You must restart worker nodes manually after every application deployment.",
+      "You write shell scripts to pull Docker images on individual servers."
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "springboot",
+    "subjectLabel": "Declarative Kubernetes Orchestration",
+    "question": "143. What happens when a Spring Boot pod fails its liveness probe in a Kubernetes Deployment?",
+    "options": [
+      "Kubernetes kills the unhealthy pod and creates a new replacement pod automatically.",
+      "Kubernetes shuts down the entire cluster.",
+      "Kubernetes ignores the failure and keeps routing traffic to the broken pod.",
+      "Kubernetes converts the pod into a static file server."
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "springboot",
+    "subjectLabel": "Kubernetes Ingress & Traffic Management",
+    "question": "144. Following the KISS principle, why is a Kubernetes Ingress preferred over creating individual `LoadBalancer` services for every microservice?",
+    "options": [
+      "LoadBalancer services do not support HTTP GET requests.",
+      "Ingress requires every microservice to run on port 80.",
+      "LoadBalancer services cannot be deployed in cloud environments.",
+      "Ingress acts as a single intelligent gateway, reducing cloud infrastructure costs and centralizing domain and TLS management."
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "springboot",
+    "subjectLabel": "Kubernetes Ingress & Traffic Management",
+    "question": "145. What is the role of TLS termination at the Kubernetes Ingress level?",
+    "options": [
+      "It forces all backend microservices to decrypt network traffic twice.",
+      "It requires developers to store private SSL keys directly inside Java source code.",
+      "It decrypts incoming HTTPS traffic at the Ingress gateway so backend Spring Boot pods receive clean internal traffic without managing SSL certificates.",
+      "It disables SSL encryption for external web users."
+    ],
+    "answer": 2
   }
   ];
 
@@ -1082,6 +1802,9 @@
             <option value="change_governance">🧘 AI-Assisted Change Governance (35 Qs)</option>
             <option value="jenkins">🎩 Jenkins CI/CD Fundamentals & Production-Grade Setup</option>
             <option value="gitlab-ci">🦊 GitLab CI</option>
+            <option value="azure-devops">☁️ Microsoft Azure DevOps</option>
+            <option value="sast_sonarqube">🧘‍♂️ 🧘‍♂️ Mindful SAST & SonarQube</option>
+            <option value="springboot">🍃 SpringBoot</option>
           </select>
         </div>
 
