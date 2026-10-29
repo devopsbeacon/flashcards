@@ -1717,11 +1717,18 @@
   let falseCount = 0;
 
   function initQuizEngine() {
+    applyAntiCopy();
     const root = document.getElementById("db-quiz-root");
     if (!root) return;
 
     const style = document.createElement("style");
     style.textContent = `
+      #db-quiz-root, #db-quiz-root * {
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+      }
       #db-quiz-root {
         --db-bg: #f8fafc; --db-card: #ffffff; --db-text: #0f172a; --db-muted: #64748b;
         --db-border: #e2e8f0; --db-primary: #2563eb; --db-primary-hover: #1d4ed8;
@@ -1850,7 +1857,23 @@
 
     loadSubject();
   }
-
+  function applyAntiCopy() {
+    // Block Right-Click Context Menu
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    
+    // Block Copy, Cut, and Selection
+    document.addEventListener('copy', e => e.preventDefault());
+    document.addEventListener('cut', e => e.preventDefault());
+    document.addEventListener('selectstart', e => e.preventDefault());
+  
+    // Block Shortcuts (F12, Ctrl+Shift+I, Ctrl+U, Ctrl+C / Cmd+C)
+    document.addEventListener('keydown', function(e) {
+      if (e.keyCode === 123) { e.preventDefault(); return false; } // F12
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) { e.preventDefault(); return false; } // Inspect
+      if ((e.ctrlKey || e.metaKey) && e.keyCode === 85) { e.preventDefault(); return false; } // View Source
+      if ((e.ctrlKey || e.metaKey) && e.keyCode === 67) { e.preventDefault(); return false; } // Copy
+    });
+  }
   function loadSubject() {
     const sel = document.getElementById("dbSubjectSelect").value;
     activeQuestions = sel === "all" ? [...quizDataset] : quizDataset.filter(q => q.subject === sel);
