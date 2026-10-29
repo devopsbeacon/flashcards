@@ -1122,6 +1122,237 @@ function initFlashcards() {
     "tag": "Continuous Hygiene & Self-Cleaning",
     "question": "What daily hygiene rituals keep an Azure DevOps workspace free of entropy?",
     "answer": "Automatically deleting completed PR branches, revoking idle PAT tokens, and running automated cleanup scripts for orphaned preview environments."
+  },
+  {
+    "id": 158,
+    "subject": "sast-sonarqube",
+    "tag": "Monk Philosophy",
+    "question": "How does the Indian Monk principle of 'Svadhyaya' reframe Static Application Security Testing (SAST)?",
+    "answer": "It transforms code inspection from a stressful external audit into a calm, daily ritual of self-study and non-judgmental reflection before code reaches production."
+  },
+  {
+    "id": 159,
+    "subject": "sast-sonarqube",
+    "tag": "KISS Principle",
+    "question": "What is the core distinction between SAST, DAST, and SCA?",
+    "answer": "SAST proofreads raw source code before execution; DAST attacks a running application from the outside; SCA audits third-party open-source dependencies."
+  },
+  {
+    "id": 160,
+    "subject": "sast-sonarqube",
+    "tag": "Nudge Theory",
+    "question": "How does 'Clean as You Code' (CAYC) leverage Nudge Theory to eliminate technical debt anxiety?",
+    "answer": "It focuses Quality Gates strictly on new or modified code in the current PR, allowing legacy debt to decay naturally without forcing painful cleanup sprints."
+  },
+  {
+    "id": 161,
+    "subject": "sast-sonarqube",
+    "tag": "Monk Philosophy",
+    "question": "How do the concepts of 'Karma Yoga' and 'Vartaman' apply to developer productivity?",
+    "answer": "They free engineers from past codebase burdens by focusing 100% of their discipline on making today's immediate changes clean, secure, and well-tested."
+  },
+  {
+    "id": 162,
+    "subject": "sast-sonarqube",
+    "tag": "Production Infrastructure",
+    "question": "Why must the default embedded H2 database be replaced with PostgreSQL in production SonarQube setups?",
+    "answer": "H2 cannot handle concurrent scanner connections, lacks data migration paths, and easily corrupts during ungraceful container shutdowns."
+  },
+  {
+    "id": 163,
+    "subject": "sast-sonarqube",
+    "tag": "Linux Kernel Tuning",
+    "question": "Which Linux kernel parameter must be set to at least 524288 for SonarQube's internal Elasticsearch engine?",
+    "answer": "vm.max_map_count—without this memory mapping threshold, Elasticsearch will crash on startup during indexing."
+  },
+  {
+    "id": 164,
+    "subject": "sast-sonarqube",
+    "tag": "Reverse Proxy & Security",
+    "question": "Why should SonarQube be wrapped in an Nginx reverse proxy with TLS/SSL?",
+    "answer": "To encrypt administrative tokens and source code snippets in transit, enforce HTTPS, and handle large scan upload buffers (client_max_body_size 100M)."
+  },
+  {
+    "id": 165,
+    "subject": "sast-sonarqube",
+    "tag": "Monk Philosophy",
+    "question": "How does 'Viveka' (Discernment) eliminate false-positive alert fatigue in SonarQube?",
+    "answer": "By discarding superficial formatting noise and tailoring Quality Profiles to focus strictly on critical OWASP vulnerabilities and runtime bugs."
+  },
+  {
+    "id": 166,
+    "subject": "sast-sonarqube",
+    "tag": "Quality Gates",
+    "question": "What are the four essential Quality Gate conditions for New Code in a production setup?",
+    "answer": "0 New Vulnerabilities, 0 New Unreviewed Security Hotspots, 80%+ Code Coverage on New Code, and Maintainability Rating A."
+  },
+  {
+    "id": 167,
+    "subject": "sast-sonarqube",
+    "tag": "KISS Principle",
+    "question": "How do you prevent auto-generated Maven build stubs from triggering false positives in SonarQube?",
+    "answer": "By defining 'sonar.exclusions=**/target/generated-sources/**' in sonar-project.properties or Maven build options."
+  },
+  {
+    "id": 168,
+    "subject": "sast-sonarqube",
+    "tag": "Monk Philosophy",
+    "question": "How does the spiritual concept of 'Sahaja' relate to automated DevSecOps pipelines?",
+    "answer": "It turns security analysis into an effortless, natural workflow where SAST triggers automatically on every push like an involuntary breath."
+  },
+  {
+    "id": 169,
+    "subject": "sast-sonarqube",
+    "tag": "Nudge Theory",
+    "question": "Why is Pull Request (PR) Decoration superior to traditional PDF security reports?",
+    "answer": "It delivers immediate, contextual nudges directly on the changed lines of code inside GitHub/GitLab PR diffs where developers can fix them instantly."
+  },
+  {
+    "id": 170,
+    "subject": "sast-sonarqube",
+    "tag": "CI/CD Optimization",
+    "question": "Why is 'fetch-depth: 0' required in GitHub Actions checkout steps for SonarQube analysis?",
+    "answer": "It fetches the complete git commit history so SonarQube can accurately calculate code diffs and evaluate Clean as You Code metrics."
+  },
+  {
+    "id": 171,
+    "subject": "sast-sonarqube",
+    "tag": "KISS Principle",
+    "question": "How does caching Maven repositories (~/.m2) and Sonar cache in CI/CD improve pipeline performance?",
+    "answer": "It speeds up pipeline execution times from minutes to seconds by avoiding redundant dependency downloads on every push."
+  },
+  {
+    "id": 172,
+    "subject": "sast-sonarqube",
+    "tag": "FinTech Case Study",
+    "question": "What vulnerability occurs when user-controlled API input is concatenated directly into SQL query strings?",
+    "answer": "SQL Injection (OWASP A03), allowing attackers to read, alter, or delete sensitive financial records."
+  },
+  {
+    "id": 173,
+    "subject": "sast-sonarqube",
+    "tag": "Healthcare Case Study",
+    "question": "Why does SonarQube flag direct logging of patient data objects as a Security Hotspot in HIPAA applications?",
+    "answer": "Because logging unmasked PII/PHI in plain text creates severe privacy compliance violations and data leak risks."
+  },
+   {
+    "id": 174,
+    "subject": "springboot",
+    "tag": "Mindful Maven Setup",
+    "question": "Why does inheriting from 'spring-boot-starter-parent' embody the KISS principle in Maven configuration?",
+    "answer": "It automatically manages compatible dependency versions, Java compiler settings, and plugin defaults, eliminating structural clutter from your pom.xml."
+  },
+  {
+    "id": 175,
+    "subject": "springboot",
+    "tag": "Build Caching",
+    "question": "How does running Maven in offline mode ('mvn clean package -o') align with the Monk mindset?",
+    "answer": "It enables developers to work in deep, uninterrupted focus using locally cached dependencies in ~/.m2 without external network latency or distractions."
+  },
+  {
+    "id": 176,
+    "subject": "springboot",
+    "tag": "KISS REST Controller",
+    "question": "What makes @RestController the ultimate minimalist choice for HTTP endpoints?",
+    "answer": "It combines @Controller and @ResponseBody into a single annotation, automatically serializing method return values directly into HTTP response bodies."
+  },
+  {
+    "id": 177,
+    "subject": "springboot",
+    "tag": "Java Records & JSON",
+    "question": "Why are Java Records recommended for API DTO payloads in modern Spring Boot apps?",
+    "answer": "Java Records provide transparent, immutable data containers with zero boilerplate—eliminating manual getters, setters, or constructors."
+  },
+  {
+    "id": 178,
+    "subject": "springboot",
+    "tag": "Isolated Unit Testing",
+    "question": "How does @WebMvcTest act as an automated safety net while upholding the KISS principle?",
+    "answer": "It boots only the web layer in isolation, allowing you to test REST controllers in milliseconds without loading backend database pools or full contexts."
+  },
+  {
+    "id": 179,
+    "subject": "springboot",
+    "tag": "MockMvc & Assertions",
+    "question": "How does seeing rapid green test feedback in the terminal apply Nudge Theory?",
+    "answer": "It delivers immediate positive reinforcement, transforming software testing from a tedious chore into a rewarding habit of maintaining code quality."
+  },
+  {
+    "id": 180,
+    "subject": "springboot",
+    "tag": "Defensive Parameters",
+    "question": "Why is setting 'defaultValue' in @RequestParam a gentle nudge for resilient API design?",
+    "answer": "It prevents HTTP 400 Bad Request errors when clients omit optional query parameters, providing graceful fallback values out of the box."
+  },
+  {
+    "id": 181,
+    "subject": "springboot",
+    "tag": "Global Error Handling",
+    "question": "How does @RestControllerAdvice promote calm resilience during unexpected API failures?",
+    "answer": "It intercepts unhandled exceptions globally and converts them into predictable JSON error payloads instead of exposing confusing raw stack traces."
+  },
+  {
+    "id": 182,
+    "subject": "springboot",
+    "tag": "Port Conflict Resolution",
+    "question": "What is the most peaceful way to resolve a 'Port 8080 in use' error without forcibly killing processes?",
+    "answer": "Reconfigure server.port=8081 in application.properties or pass --server.port=8081 as a command-line runtime argument."
+  },
+  {
+    "id": 183,
+    "subject": "springboot",
+    "tag": "Zen Dockerfiles",
+    "question": "Why choose 'eclipse-temurin:17-jre-alpine' over full JDK operating system images for container runtime?",
+    "answer": "It drastically reduces container image size, speeds up deployments, and eliminates unnecessary OS utilities, minimizing security attack vectors."
+  },
+  {
+    "id": 184,
+    "subject": "springboot",
+    "tag": "Multi-Stage Builds",
+    "question": "How does a multi-stage Docker build reflect the Monk concept of 'carrying only what is necessary'?",
+    "answer": "It compiles code in a temporary build stage with Maven, then copies ONLY the final executable JAR into a lean JRE runtime container, discarding build tools."
+  },
+  {
+    "id": 185,
+    "subject": "springboot",
+    "tag": "Spring Boot Actuator",
+    "question": "What is the difference between Actuator's /health/liveness and /health/readiness probes?",
+    "answer": "Liveness indicates if the application runtime is alive (restart if failed), while Readiness indicates if the app is ready to accept network traffic (pause routing if failed)."
+  },
+  {
+    "id": 186,
+    "subject": "springboot",
+    "tag": "Docker Health Checks",
+    "question": "How does the HEALTHCHECK directive in a Dockerfile nudge cloud infrastructure toward self-healing?",
+    "answer": "It allows Docker to periodically probe health endpoints and automatically mark or restart containers that become unresponsive."
+  },
+  {
+    "id": 187,
+    "subject": "springboot",
+    "tag": "Declarative Deployments",
+    "question": "How does declarative Kubernetes orchestration mirror the Monk mindset?",
+    "answer": "Instead of executing manual terminal commands on every failure, you declare desired state in YAML and allow Kubernetes to silently reconcile and maintain that state."
+  },
+  {
+    "id": 188,
+    "subject": "springboot",
+    "tag": "Self-Healing Pods",
+    "question": "What happens in a Kubernetes cluster when a Spring Boot pod fails its liveness probe?",
+    "answer": "Kubernetes automatically terminates the unhealthy pod and provisions a new replacement pod to restore the declared replica count."
+  },
+  {
+    "id": 189,
+    "subject": "springboot",
+    "tag": "Ingress Gateway Routing",
+    "question": "Why is a Kubernetes Ingress preferred over creating individual LoadBalancer services for every microservice?",
+    "answer": "Ingress provides a single, unified entry gateway for external traffic, routing requests by host or path to backend services while reducing cloud costs."
+  },
+  {
+    "id": 190,
+    "subject": "springboot",
+    "tag": "TLS Termination",
+    "question": "What operational benefit does centralizing TLS/SSL termination at the Ingress controller provide?",
+    "answer": "It decrypts HTTPS traffic at the cluster gateway, relieving backend Spring Boot microservices from managing SSL certificates and cryptographic overhead."
   }
 
 
@@ -1384,6 +1615,8 @@ function initFlashcards() {
             <option value="jenkins">⚙️ 6. Jenkins</option>
             <option value="gitlab-ci">🦊 7. GitLab CI</option>
             <option value="azure-devops">☁️ 8. Azure DevOps</option>
+            <option value="sast-sonarqube">🧘‍♂️ 9. Mindful SAST & SonarQube</option>
+            <option value="springboot">🍃 10. Spring Boot API, Docker & Kubernetes Fundamentals</option>
         </select>
         <input type="text" id="dbSearchInput" class="db-input" placeholder="Search keywords...">
       </div>
