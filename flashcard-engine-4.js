@@ -1,4 +1,22 @@
+function applyAntiCopy() {
+  // Block Right-Click Context Menu
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  
+  // Block Copy, Cut, and Selection
+  document.addEventListener('copy', e => e.preventDefault());
+  document.addEventListener('cut', e => e.preventDefault());
+  document.addEventListener('selectstart', e => e.preventDefault());
+
+  // Block Shortcuts (F12, Ctrl+Shift+I, Ctrl+U, Ctrl+C / Cmd+C)
+  document.addEventListener('keydown', function(e) {
+    if (e.keyCode === 123) { e.preventDefault(); return false; } // F12
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) { e.preventDefault(); return false; } // Inspect
+    if ((e.ctrlKey || e.metaKey) && e.keyCode === 85) { e.preventDefault(); return false; } // View Source
+    if ((e.ctrlKey || e.metaKey) && e.keyCode === 67) { e.preventDefault(); return false; } // Copy
+  });
+}
 function initFlashcards() {
+  applyAntiCopy();
   const container = document.getElementById('db-flashcards-root');
   if (!container) {
     setTimeout(initFlashcards, 100);
@@ -1364,6 +1382,12 @@ function initFlashcards() {
   // Inject Modern Themed CSS
   const style = document.createElement('style');
   style.textContent = `
+    #db-quiz-root, #db-quiz-root * {
+      -webkit-user-select: none !important;
+      -moz-user-select: none !important;
+      -ms-user-select: none !important;
+      user-select: none !important;
+    }
     .db-flashcard-wrapper {
       --db-bg: #f8fafc;
       --db-card-front: #ffffff;
